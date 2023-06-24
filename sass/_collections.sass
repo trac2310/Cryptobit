@@ -1,0 +1,107 @@
+.collections
+  background-color: #120F28
+
+.list-collections
+  display: flex
+  justify-content: space-between
+  margin-left: -24px
+  flex-wrap: wrap
+  padding-top: 55px
+
+  .collections-container
+    width: calc(100% / 3 - 24px)
+    margin-left: 24px
+    background: #2A273E
+    padding: 19px 20px 6px
+    border-radius: 10px
+
+    img
+      border-radius: 10px
+
+.collections-image
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-gap: 10px
+
+  .collections-image-left
+    display: flex
+    flex-direction: column
+    gap: 10px
+
+    .image-small-top
+      display: flex
+      gap: 10px
+
+  .collections-image-right
+    display: block
+
+    img
+      width: 100% !important
+      height: 100%
+
+.collections-content
+  padding: 5px 0px 16px
+  display: flex
+  position: relative
+
+  .collections-content-text
+    margin-left: 20px
+
+    .title-author
+      font-size: 20px
+      display: block
+
+    .title-author:hover
+      transition: .5s
+      color: $hover-button
+
+    a
+      color: #A7A6AC
+
+      .name-author
+        color: $hover-button
+
+  .explore-icon
+    position: absolute
+    right: 0
+    top: 20px
+    background: #2A273E
+    padding: 1px 15px 1px 15px
+    border-radius: 30px
+    border: 1px solid #555265
+    z-index: 1
+
+    i
+      color: #EB5757
+
+    span
+      color: white
+      margin-left: 5px
+
+  .explore-icon:before
+    content: ""
+    inset: 0
+    position: absolute
+    z-index: -1
+    background: $primary-color
+    transform: scale(0)
+    overflow: hidden
+    border-radius: 30px
+    transition: .5s
+
+  .explore-icon:hover:before
+    transform: scale(100%)
+    transition: .5s
+
+@media screen and (max-width: 1024px)
+  .collections .title-service:before
+    left: 150px
+
+  .list-collections
+    display: grid
+    grid-template-columns: auto auto
+    justify-content: stretch
+    gap: 24px
+
+  .list-collections .collections-container
+    width: 100%

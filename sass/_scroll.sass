@@ -1,0 +1,88 @@
+.scroll-top
+  position: fixed
+  bottom: 800px
+  right: 40px
+  visibility: hidden
+  opacity: 0
+  transition: .9s
+
+  #myBtn
+    position: fixed
+    border: none
+    background: transparent
+    width: 50px
+    height: 50px
+    background: #518EFF
+    border-radius: 100%
+    cursor: pointer
+    z-index: 1
+
+    i
+      color: #fff
+      font-size: 20px
+      position: relative
+      z-index: 2
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+
+    i:nth-child(1)
+      color: #fff
+      font-size: 20px
+
+    i:nth-child(2)
+      transition: .9s
+
+    i:nth-child(1):before
+      position: absolute
+      z-index: -1
+      top: 50%
+      transform: translateY(-50%)
+      transition: .9s
+
+.scroll-top:hover i:nth-child(1):before
+  animation: fadeIn 2s ease-in forwards
+  transition: .5s
+
+.scroll-top:hover i:nth-child(2):before
+  animation: fadeOut 1s ease-in forwards
+  transition: .5s
+
+.scroll-top.active
+  visibility: visible
+  opacity: 1
+  bottom: 10%
+  right: 5%
+
+@keyframes fadeIn
+  25%
+    opacity: 0
+    transform: translateY(-40px)
+    transition: .5s
+    visibility: hidden
+
+  50%
+    opacity: 0.25
+    visibility: hidden
+    transform: translateY(5%)
+
+  75%
+    opacity: 0.75
+    visibility: hidden
+    transform: translateY(5%)
+
+  100%
+    opacity: 1
+    visibility: hidden
+
+@keyframes fadeOut
+  25%
+    opacity: 0
+    transform: translateY(5%)
+
+  100%
+    opacity: 1

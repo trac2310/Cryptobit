@@ -1,0 +1,114 @@
+.footer
+  background-image: url('/images/footer.jpg')
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  padding-top: 80px
+
+  .footer-container
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.footer-logo
+  display: flex
+  flex-direction: column
+
+  .text-footer
+    padding: 20px 0px 13px
+    color: #fff
+    font-size: 17px
+
+  .follow-footer ul
+    display: flex
+    gap: 20px
+    padding: 10px 0px 17px
+
+    a
+      width: 40px
+      height: 40px
+      background: #2A273E
+      border-radius: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      position: relative
+      z-index: 1
+
+      i
+        color: #fff
+
+    a:before
+      content: ''
+      inset: 0
+      position: absolute
+      z-index: -1
+      transition: .5s
+      transform: scale(0)
+      background: $primary-hover
+      overflow: hidden
+      border-radius: 100%
+
+    a:hover:before
+      transition: .5s
+      transform: scale(100%)
+
+.footer-menu
+  display: flex
+  justify-content: space-between
+  padding-top: 10px
+  width: calc(98% - 322px)
+
+  .container-menu
+    width: calc(100% / 4)
+
+    .title-menu
+      font-size: 24px
+      font-weight: 600
+      line-height: 1.2
+      padding-bottom: 16px
+
+    a
+      color: #fff
+      line-height: 1.7
+      display: inline-block
+      font-size: 17px
+      position: relative
+      z-index: 1
+      padding: 0 0 8px 20px
+      -webkit-text-fill-color: transparent
+      -webkit-background-clip: text !important
+      background: linear-gradient(to right, #B725FF 50%, #fff 50%)
+      background-position: 100%
+      background-size: 200% 100%
+      transition: .9s
+
+    a:hover
+      background-position: 0
+      transition: .9s
+
+    a:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 35%
+      transform: translateY(-50%)
+      width: 10px
+      height: 10px
+      border-radius: 100%
+      border: 2px solid $hover-text
+
+.footer-bottom
+  margin-top: 80px
+  text-align: center
+  border-top: 1px solid rgba(255, 255, 255, 0.20)
+
+  .coppry-right
+    padding: 24px 0px
+
+    span
+      color: #fff
+      font-size: 17px
+
+      a
+        color: #518EFF

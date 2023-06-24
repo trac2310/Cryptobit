@@ -1,0 +1,167 @@
+.keyvisual
+  max-width: 100%
+  width: 100%
+  background-image: url(/images/slider-bg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+
+  .wrapper
+    display: flex
+    align-items: center
+    justify-content: space-around
+    padding-top: 175px
+
+  .content-keyvisual
+    display: flex
+    flex-direction: column
+    margin-top: 48px
+
+  .title-primary
+    font-size: 60px
+    font-weight: 700
+    line-height: 68px
+
+    span
+      width: 100%
+      background: $primary-color
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+  .text-banner
+    color: white
+    padding: 32px 0px 25px
+    max-width: 624px
+    line-height: 28px
+    font-size: 17px
+
+.button-keyvisual
+  display: flex
+
+  a
+    max-width: 196px
+    min-height: 56px
+    width: 100%
+    height: 100%
+    color: white
+    border-radius: 5px
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    z-index: 1
+
+  .button-explore
+    background: $primary-color
+
+    span
+      color: white
+      font-size: 17px
+
+    i::before
+      display: inline-block
+      margin-right: 10px
+
+  .button-explore:before
+    content: ""
+    position: absolute
+    z-index: -1
+    inset: 0
+    background: $primary-hover
+    transition: .5s
+    transform: scale(0)
+    border-radius: 5px
+
+  .button-explore:hover:before
+    transform: scale(100%)
+
+  .button-create
+    border: 1px solid
+    border-image: $primary-color 1
+    margin-left: 15px
+    background: transparent
+
+    i::before
+      display: inline-block
+      margin-left: 5px
+
+  .button-create:before
+    content: ""
+    position: absolute
+    z-index: -1
+    inset: 0
+    background: $primary-color
+    transition: .5s
+    transform: scale(0)
+
+  .button-create:hover:before
+    transform: scale(100%)
+
+.list-container
+  width: 50%
+  height: 100%
+
+  .slide-image
+    max-width: 504px
+    width: 100%
+    height: 100%
+
+    img
+      border: 2px solid #B725FF
+      border-radius: 150px 15px 0 0
+
+.slide-content
+  max-width: 504px
+  width: 100%
+  padding: 15px 30px 9px
+  background: #1B173A
+  border: 1px solid #2B316D
+  border-radius: 0 0 15px 15px
+
+  .title-swiper
+    font-size: 24px
+    padding-bottom: 10px
+
+  .container-content-swiper
+    display: flex
+    justify-content: space-between
+    color: #fff
+
+    .slide-content-text
+      display: inline-block
+      font-size: 18px
+
+      span
+        color: #518EFF
+
+    .slide-heart
+      display: inline-block
+      font-size: 18px
+      display: flex
+      align-items: center
+
+      i
+        color: #EB5757
+        font-size: 24px
+        margin-right: 8px
+
+.swiper-slide
+  background-position: center
+  background-size: cover
+  padding: 40px 60px 60px 60px
+
+  img
+    display: block
+    width: 100%
+
+@media screen and (max-width: 1024px)
+  .keyvisual .wrapper
+    display: flex
+    flex-direction: column
+
+  .keyvisual .title-primary
+    font-size: 38px
+
+  .list-container
+    width: 100%
+    margin-top: 48px

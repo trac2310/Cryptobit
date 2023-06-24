@@ -1,0 +1,92 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Barlow', sans-serif
+  scroll-behavior: smooth
+
+body
+  font-family: 'Barlow', sans-serif
+  color: #616161
+  line-height: 28px
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  color: white
+  font-family: 'Barlow', sans-serif
+
+.title-service
+  font-size: 16px
+  background: $primary-title
+  text-transform: uppercase
+  -webkit-text-fill-color: transparent
+  -webkit-background-clip: text
+
+.wrapper
+  max-width: 1320px
+  padding: 0px 12px
+  margin: 0 auto
+
+.primary-button
+  display: inline-block
+  font-size: 17px
+  background: $primary-color
+  color: white
+  padding: 4px 15px
+  border-radius: 30px
+  border: none
+  position: relative
+  z-index: 1
+  cursor: pointer
+
+.primary-button:before
+  content: ""
+  position: absolute
+  z-index: -1
+  inset: 0
+  background: $primary-hover
+  transition: .5s
+  transform: scale(0)
+  border-radius: 30px
+
+.primary-button:hover:before
+  transform: scale(100%)
+
+.title-service
+  font-weight: 700
+  width: 50%
+  position: relative
+
+.title-service:before
+  content: ""
+  width: 60px
+  height: 1px
+  background: $primary-color
+  position: absolute
+  top: 13px
+  left: 100px
+
+.container-title h2
+  font-size: 36px
+  font-weight: 700
+  margin-top: 10px
+  line-height: 1.2
+
+.icon-search
+  cursor: pointer
+
+@media screen and (max-width: 1024px)
+
+  .auctions-products
+    flex-direction: column
+    gap: 30px
+
+  .container-auctions
+    width: 100%
+
+  .container-title h2
+    font-size: 30px

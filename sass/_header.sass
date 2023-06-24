@@ -1,0 +1,196 @@
+header
+  background-color: transparent
+  position: fixed
+  inset: 0
+  border-bottom: 1px solid rgba(255, 255, 255, 0.20)
+  height: 90px
+  width: 100%
+  position: relative
+  z-index: 999
+  margin-bottom: -100px
+
+  .wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+    height: 100%
+
+  .header-logo
+    max-width: 195px
+    padding: 0px 12px
+
+.header-menu
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  height: 100%
+  align-items: center
+
+  .list-menu
+    display: flex
+    align-items: center
+    height: 100%
+
+  .item-list
+    position: relative
+    display: flex
+    align-items: center
+    height: auto
+
+  .item-menu
+    margin: 30px 13px
+    font-size: 18px
+    color: #fff
+
+    i
+      font-size: 13px
+      transition: color 3s
+
+  .item-menu:hover
+    color: $hover-text
+    transition: .5s
+
+  .item-menu:hover i
+    color: $hover-text
+    transform: rotateX(180deg)
+    transition: .5s
+
+  .item-list:hover > .sub-menu
+    opacity: 1
+    visibility: visible
+    top: 90px
+
+.sub-menu
+  position: absolute
+  width: 240px
+  top: 120px
+  left: 0
+  background-color: white
+  transition: .5s
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3)
+  opacity: 0
+  visibility: hidden
+
+  a
+    padding: 12px 20px
+    display: block
+    border-top: 1px solid rgba(0, 0, 0, 0.10)
+    color: #616161
+    font-size: 18px
+    line-height: 1.3
+
+  .item-sub:hover a
+    color: white
+    background-color: $hover-button
+
+.header-function
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  padding-left: 60px
+  gap: 15px
+
+.search-header
+  min-width: 248px
+  position: relative
+  display: flex
+  align-items: center
+  gap: 15px
+
+  input
+    width: 100%
+    min-height: 44px
+    border-radius: 30px
+    padding: 0 32px 0
+    background-color: transparent
+    border: 1px solid $primary-border
+
+  .icon-search
+    position: absolute
+    right: 32px
+    font-size: 17px
+
+  ::placeholder
+    font-size: 17px
+
+.notification-header
+  display: inline-block
+  cursor: pointer
+
+  .icon-notification
+    width: 40px
+    height: 40px
+    border-radius: 100%
+    border: 1px solid $primary-border
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    font-size: 20px
+
+    span
+      width: 20px
+      height: 20px
+      position: absolute
+      right: 0
+      transform: translateY(-100%)
+      border: 1px solid $primary-border
+      border-radius: 100%
+      border: none
+      color: white
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 13px
+      background-color: $hover-button
+
+.primary-button
+  height: 40px
+  min-width: 100px
+
+@media screen and (min-width: 1024px)
+  .icon-menu
+    display: none
+
+@media screen and (max-width: 1024px)
+  .header-function
+    display: none
+
+  .header-menu
+    width: 100%
+    height: fit-content
+    position: absolute
+    top: 90px
+    left: 0
+    overflow: hidden
+    transition: all .3s ease
+
+    .list-menu
+      width: 100%
+      background: #fff
+      height: fit-content
+      flex-direction: column
+      align-items: flex-start
+
+    .item-list
+      width: 100%
+      font-size: .14rem
+      padding: 0px 28px
+      border-bottom: 1px solid #ddd
+      height: auto
+
+    .item-menu
+      color: #000 !important
+      margin: 0
+
+.icon-button
+  padding: 0px 20px
+  display: block
+  border: none
+  background: transparent
+
+  i
+    color: #fff
+    font-size: 20px

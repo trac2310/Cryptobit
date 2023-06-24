@@ -1,0 +1,148 @@
+.explore
+  padding-top: 85px
+  background-color: #120F28
+
+  .explore-main
+    padding-top: 48px
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 30px 24px
+    justify-content: center
+
+    .list-explore
+      background: #2A273E
+      padding: 19px 20px 29px
+      border-radius: 10px
+      display: flex
+      flex-direction: column
+
+      .explore-image
+        width: 100%
+        position: relative
+
+        img
+          display: inline-block
+          width: 100%
+          border-radius: 13px
+
+        .explore-icon
+          position: absolute
+          top: 10px
+          right: 8px
+          font-size: 15px
+          background: #2A273E
+          padding: 1px 15px 1px 15px
+          border-radius: 30px
+
+          i
+            color: #EB5757
+
+          .text-heart
+            margin-left: 5px
+            color: #fff
+
+        .explore-button
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          background: #fff
+          border-radius: 30px
+          padding: 7px 28px
+          display: flex
+          justify-content: center
+          align-items: center
+          right: -10%
+          transition: .9s
+          opacity: 0
+
+          a
+            color: #616161
+            font-size: 14px
+
+            span
+              margin-left: 10px
+
+        .explore-button:hover a
+          color: $hover-text
+          transition: .5s
+
+      .title-explore
+        color: #fff
+        font-size: 20px
+        padding: 6px 0 11px
+        display: block
+
+      .title-explore:hover
+        color: $hover-button
+        transition: .5s
+
+      .content-left-explore
+        display: grid
+        grid-template-columns: repeat(1, 50px) 1fr 1fr
+
+        span
+          font-size: 14px
+          color: #BDBDC1
+
+        .title-author
+          color: $hover-button
+          cursor: pointer
+
+        .text-price
+          display: flex
+          text-align: right
+          flex-direction: column
+
+          .price-explore
+            font-weight: 600
+
+          .price-explore:hover
+            color: $hover-text
+
+    .list-explore:hover .explore-button
+      opacity: 1
+      transition: .9s
+      position: absolute
+      right: 20%
+      z-index: 3
+      color: $hover-text
+
+.button-load
+  padding-top: 62px
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+
+  a
+    display: inline-block
+    padding: 14px 38px
+    border-radius: 5px
+    background: $primary-color
+    color: #fff
+    position: relative
+    z-index: 1
+
+  a:before
+    content: ""
+    position: absolute
+    right: 0
+    top: 0
+    z-index: -1
+    width: 0
+    height: 100%
+    background: $primary-hover
+    border-radius: 5px
+    transition: .5s
+
+.button-load a:hover:before
+  width: 100%
+  transition: .5s
+  position: absolute
+  left: 0
+
+@media screen and (max-width: 1024px)
+  .explore .explore-main
+    display: grid
+    grid-template-columns: auto auto
+    justify-content: stretch

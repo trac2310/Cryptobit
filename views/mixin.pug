@@ -1,0 +1,122 @@
+mixin ListSwiper(data)
+    .slide-image
+        img(src=data.img)
+    .slide-content
+        h4.title-swiper!=data.title
+        .container-content-swiper
+            .slide-content-text 
+                p Price:  
+                    span.text-money!=data.money 
+            .slide-heart 
+                i.fas.fa-heart
+                span.text-heart!=data.heart
+
+mixin ListAuctions(data)
+    .container-auctions-top 
+        img(src=data.imgAuthor)
+        h5.title-author!=data.author 
+        i.menu-auctions.fas.fa-ellipsis-v  
+            .list-auctions 
+                a(href="") Share
+                a(href="") Report 
+    .container-auctions-main 
+        img(src=data.imgAuctions)
+        .auctions-main-top
+            i.fas.fa-heart
+            span.text-like!=data.like
+        .auctions-main-count
+            if(data.number)
+                ul
+                    each item in data.number
+                        li
+                            span= item
+    .container-auctions-content
+        h3  
+            a(href="").title-auctions!=data.title
+        .auctions-content-top 
+            p Price: 
+                span.text-price!=data.price
+            p.text-stock!=data.stock 
+        .auctions-content-bottom 
+            button.primary-button Plece Bid
+            a(href="")
+                i.fas.fa-history
+                span  View History   
+
+mixin ListCreatives(data)
+    img(src=data.img)
+    a(href="#") 
+        h3.title-creatives!=data.title 
+    span.text-price!=data.text 
+
+mixin ListExplore(data)
+    .explore-image 
+        img(src=data.img)
+        .explore-icon
+            i.fas.fa-heart
+            span.text-heart!=data.heart
+        .explore-button
+            a(href="") 
+                i.fas.fa-shopping-bag
+                span Plice Bid
+    .explore-content 
+        h2 
+            a(href="").title-explore!=data.title 
+        .explore-content-bottom 
+            .content-left-explore
+                .image-author
+                    img(src=data.imgAuthor)
+                .text-author 
+                    span Created By
+                    h3.title-author!=data.author
+                .text-price 
+                    span Curent Bid
+                    h6.price-explore!=data.price
+
+mixin ListCollections(data)
+    .collections-image 
+        .collections-image-left 
+            .image-small-top 
+                img(src=data.imgSmallLeft, style="width: 86px; height: 91px")
+                img(src=data.imgSmallRight, style="width: 86px; height: 91px")
+            .image-big-bottom 
+                img(src=data.imgBigBottom, style="width: 183px; height: 150px")
+        .collections-image-right
+            img(src=data.imgBig, style="width: 183px; height: 251px")
+    .collections-content 
+        img(src=data.imgAuthor)
+        .collections-content-text 
+            a(href="") 
+                h2.title-author!=data.title 
+            a(href="") Created By 
+                span.name-author!=data.name 
+        .explore-icon
+            a(href="") 
+                i.fas.fa-heart
+                span.text-heart!=data.heart
+
+mixin ListBlog(data)
+    img(src=data.img)
+    .content-blog 
+        .content-blog-top 
+            .blog-top-text
+                a(href="")  
+                    i.fas.fa-calendar-alt
+                    span.text-date!=data.date
+            .blog-top-text
+                a(href="")  
+                    i.fas.fa-user
+                    span.text-name!=data.name
+        .content-blog-title
+            a(href="")  
+                h2.title-blog!=data.title
+
+mixin ListMenu(data, ...items)
+    h3.title-menu!= data.title
+    ul
+        each item in items
+            li
+                a(href="")= item 
+
+
+            

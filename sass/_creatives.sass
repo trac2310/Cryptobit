@@ -1,0 +1,57 @@
+.creatives
+  padding-top: 110px
+  background-color: #120F28
+  position: relative
+
+.container-title
+  display: flex
+
+  h2
+    font-weight: 700
+    margin-top: 10px
+    line-height: 1.2
+
+  .button-creatives
+    display: flex
+    gap: 10px
+
+.creatives-list
+  padding-top: 80px
+  display: grid
+  grid-template-columns: repeat(8, 1fr)
+  gap: 38px
+  overflow: hidden
+
+  img
+    width: 100%
+
+  .title-creatives
+    margin-top: 10px
+    padding: 5px 18px 4px
+    font-size: 20px
+    transition: .9s
+    background: linear-gradient(to right, #518EFF 50%, #fff 50%)
+    -webkit-text-fill-color: transparent
+    -webkit-background-clip: text
+    background-size: 200%, 100%
+    background-position: 100%
+
+  .title-creatives:hover
+    background-position: 0
+
+  .text-price
+    padding-left: 18px
+    color: $hover-button
+
+.owl-dots
+  display: none
+
+.owl-nav
+  position: absolute
+  top: 0
+  margin: 0 !important
+
+.container-creatives
+  display: flex
+  flex-direction: column
+  align-items: flex-end

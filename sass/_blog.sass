@@ -1,0 +1,55 @@
+.blog
+  padding-top: 90px
+  padding-bottom: 70px
+  background-color: #120F28
+
+  .list-blog
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-left: -24px
+    padding-top: 55px
+
+    .container-blog
+      width: calc(100% / 3 - 24px)
+      margin-left: 24px
+      background: #2A273E
+      padding: 19px 20px 30px
+      border-radius: 10px
+
+      img
+        width: 100%
+
+      .content-blog-top
+        display: flex
+        gap: 30px
+        position: relative
+
+        a
+          font-size: 16px
+          color: #518EFF
+          display: flex
+          align-items: center
+          gap: 10px
+
+        .blog-top-text:nth-child(2):before
+          content: ''
+          width: 1px
+          height: 15px
+          border-left: 1px solid #7F7D8B
+          padding-left: 10px
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          left: 35%
+
+      .title-blog
+        font-weight: 600
+        font-size: 20px
+        line-height: 30px
+        margin-top: 10px
+        transition: .5s
+
+      .title-blog:hover
+        color: $hover-button
+        transition: .5s

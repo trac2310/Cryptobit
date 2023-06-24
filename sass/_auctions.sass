@@ -1,0 +1,197 @@
+.auctions
+  background-color: #120F28
+  padding-top: 70px
+
+  .auctions-top
+    margin-bottom: 52px
+
+.container-title
+  display: flex
+  justify-content: space-between
+
+  .title-section
+    font-weight: 700
+    position: relative
+    padding-left: 54px
+    margin-top: 10px
+    line-height: 1.2
+
+  .title-section:before
+    content: ''
+    width: 18px
+    height: 18px
+    position: absolute
+    top: 17px
+    left: 10px
+    background: #B725FF
+    border-radius: 50%
+    z-index: 2
+
+  .title-section:after
+    content: ''
+    width: 38px
+    height: 38px
+    position: absolute
+    left: 0
+    top: 7px
+    background: #441669
+    border-radius: 50%
+    z-index: 1
+
+  a
+    color: white
+    font-size: 17px
+    display: flex
+    align-items: center
+
+    i
+      color: #B725FF
+      margin-left: 10px
+
+.auctions-products
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  margin-left: -24px
+
+  .container-auctions
+    width: calc(100% / 4 - 24px)
+    margin-left: 24px
+    background-color: #2A273E
+    border-radius: 10px
+    padding: 16px 20px 20px
+
+.container-auctions-top
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 20px
+
+  .title-author
+    margin-left: -90px
+
+  .menu-auctions
+    color: white
+    position: relative
+
+  .list-auctions
+    display: none
+    min-width: 112px
+    background-color: #34314B
+    position: absolute
+    z-index: 5
+    left: -85px
+    border-radius: 5px
+
+    a
+      padding: 16px 16px
+      color: #fff
+      border-radius: 5px
+      font-size: 17px
+      font-family: 'Barlow', sans-serif
+      font-weight: normal
+
+    a:nth-child(1)
+      border-bottom: 1px solid #403D52
+
+    a:hover
+      background-color: $hover-text
+
+  .menu-auctions:hover .list-auctions
+    display: block
+    position: absolute
+    display: flex
+    flex-direction: column
+
+.container-auctions-main
+  max-width: 100%
+  position: relative
+
+  img
+    width: 100%
+    display: inline-block
+
+  .auctions-main-top
+    width: 72px
+    height: 30px
+    position: absolute
+    top: 10px
+    right: 10px
+    background: #2A273E
+    border-radius: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #EB5757
+
+    span
+      color: #fff
+
+  .auctions-main-count
+    position: absolute
+    bottom: 25px
+    display: flex
+    justify-content: center
+    width: 100%
+
+    ul
+      display: flex
+      gap: 5px
+
+      li
+        background-color: #2A273E
+        border-radius: 3px
+
+        span
+          color: #fff
+          line-height: 30px
+          padding: 5px
+
+.container-auctions-content
+  .title-auctions
+    color: #fff
+    font-size: 20px
+    padding: 8px 0px 8px
+    display: inline-block
+
+  .title-auctions:hover
+    color: $hover-button
+    transition: .5s
+
+  .auctions-content-top
+    display: flex
+    justify-content: space-between
+
+    p
+      color: #fff
+      font-size: 16px
+
+      span
+        color: $hover-button
+
+    .text-stock
+      color: #AEAEB3
+
+  .auctions-content-bottom
+    display: flex
+    justify-content: space-between
+    margin-top: 16px
+
+    button
+      display: inline-block
+      font-size: 16px
+
+    a
+      color: $hover-button
+      font-size: 16px pos
+
+@media screen and (max-width: 1024px)
+  .auctions-products
+    display: grid
+    grid-template-columns: auto auto
+    justify-content: stretch
+    margin: 0
+
+  .auctions-products .container-auctions
+    width: 100%
+    margin: 0
